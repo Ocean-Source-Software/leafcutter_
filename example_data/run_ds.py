@@ -15,8 +15,8 @@ def run(cmd, max_minutes = 6000):
     (file_stdin, file_stdout, file_stderr) = (p.stdin, p.stdout, p.stderr)
 
     t = 0
-    r = ''
-    e = ''
+    r = b''
+    e = b''
     while t < 60*max_minutes and p.poll() is None:
         time.sleep(1)  # (comment 1)
         t += 1
