@@ -113,15 +113,15 @@ if __name__ == "__main__":
         else:
             sys.stderr.write("%s exists..skipping\n"%juncfile)
             continue
-        print run("samtools view %s | python %s/scripts/filter_cs.py | %s/scripts/sam2bed.pl --use-RNA-strand - %s"%(bam, options.leafd, options.leafd,bedfile))[1]
-        print run("%s/scripts/bed2junc.pl %s %s; rm %s"%(options.leafd,bedfile,juncfile, bedfile))[1]
+        print(run("samtools view %s | python %s/scripts/filter_cs.py | %s/scripts/sam2bed.pl --use-RNA-strand - %s"%(bam, options.leafd, options.leafd,bedfile))[1])
+        print(run("%s/scripts/bed2junc.pl %s %s; rm %s"%(options.leafd,bedfile,juncfile, bedfile))[1])
         
     fout.close()
     
-    print run("python %s/clustering/leafcutter_cluster.py -j %s/junction_files.txt -m %s -o %s -l %s -r %s -p %s"%(options.leafd,options.tmpdir,options.minclureads, options.outprefix,str(options.maxintronlen), options.tmpdir,str(options.mincluratio)))[1]
+    print(run("python %s/clustering/leafcutter_cluster.py -j %s/junction_files.txt -m %s -o %s -l %s -r %s -p %s"%(options.leafd,options.tmpdir,options.minclureads, options.outprefix,str(options.maxintronlen), options.tmpdir,str(options.mincluratio)))[1])
 
     if options.annotation != None:
-        print run("python %s/clustering/get_cluster_gene.py %s %s/%s_perind.counts.gz"%(options.leafd,options.annotation, options.tmpdir,options.outprefix))[1]
+        print(run("python %s/clustering/get_cluster_gene.py %s %s/%s_perind.counts.gz"%(options.leafd,options.annotation, options.tmpdir,options.outprefix))[1])
         
     
     
@@ -134,5 +134,5 @@ if __name__ == "__main__":
     fout.close()
 
     
-    print run("Rscript %s/scripts/leafcutter_ds.R --num_threads 1 -i 3 %s/%s_perind_numers.counts.gz %s/ds_test"%(options.leafd,options.tmpdir,options.outprefix,options.tmpdir))[1]
+    print(run("Rscript %s/scripts/leafcutter_ds.R --num_threads 1 -i 3 %s/%s_perind_numers.counts.gz %s/ds_test"%(options.leafd,options.tmpdir,options.outprefix,options.tmpdir))[1])
 
