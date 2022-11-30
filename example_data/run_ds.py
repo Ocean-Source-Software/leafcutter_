@@ -103,7 +103,7 @@ if __name__ == "__main__":
     # check samtools
 
     sys.stderr.write("processing bam files...\n")
-    fout = file("%s/junction_files.txt"%options.tmpdir,'w')
+    fout = open("%s/junction_files.txt"%options.tmpdir,'w')
     for bam in bamA+bamB:
         bedfile = "%s/%s.bed"%(options.tmpdir,bam.split('/')[-1])
         juncfile = "%s/%s.junc"%(options.tmpdir,bam.split('/')[-1])
@@ -126,7 +126,7 @@ if __name__ == "__main__":
     
     
     
-    fout = file("%s/ds_test"%(options.tmpdir),'w')
+    fout = open("%s/ds_test"%(options.tmpdir),'w')
     for bam in bamA:
         fout.write("%s group1\n"%bam.split("/")[-1])
     for bam in bamB:
