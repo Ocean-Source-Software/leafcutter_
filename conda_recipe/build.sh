@@ -2,7 +2,6 @@
 
 set -e -x
 
-yes | conda install r-devtools samtools
 Rscript -e 'if (!require("BiocManager", quietly = TRUE))
     install.packages("BiocManager", repos="http://cran.us.r-project.org")
 

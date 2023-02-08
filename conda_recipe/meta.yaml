@@ -28,11 +28,22 @@ build:
 
 # Suggests: knitr, rmarkdown
 
-test:
-  commands:
-    # You can put additional test commands to be run here.
-    - $R -e "library('leafcutter')"  # [not win]
-    - "\"%R%\" -e \"library('leafcutter')\""  # [win]
+requirements:
+  build:
+    - r-base
+    - r-devtools
+    - samtools
+
+  run:
+    - r-base
+    - r-devtools
+    - samtools
+
+# test:
+#   commands:
+#     # You can put additional test commands to be run here.
+#     - $R -e "library('leafcutter')"  # [not win]
+#     - "\"%R%\" -e \"library('leafcutter')\""  # [win]
 
   # You can also put a file called run_test.py, run_test.sh, or run_test.bat
   # in the recipe that will be run at test time.
