@@ -46,7 +46,7 @@ requirements:
     - r-optparse
     - r-reshape2
     - r-rstan >=2.8.1
-    - r-stantools
+    - r-rstantools
     - r-shiny
     - r-shinyjs
     - r-shinycssloaders
@@ -72,7 +72,7 @@ requirements:
     - r-optparse
     - r-reshape2
     - r-rstan >=2.8.1
-    - r-stantools
+    - r-rstantools
     - r-shiny
     - r-shinyjs
     - r-shinycssloaders
