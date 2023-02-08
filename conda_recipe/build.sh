@@ -2,10 +2,10 @@
 
 set -e -x
 
-Rscript -e 'if (!require("BiocManager", quietly = TRUE))
-    install.packages("BiocManager", repos="http://cran.us.r-project.org")
+pushd ./leafcutter
+# R refuses to build packages that mark themselves as Priority: Recommended
+mv DESCRIPTION DESCRIPTION.old
+grep -v '^Priority: ' DESCRIPTION.old >DESCRIPTION
 
-BiocManager::install("Biobase")
-BiocManager::install("DirichletMultinomial")
-devtools::install_github("davidaknowles/leafcutter/leafcutter")
-'
+$R CMD INSTALL --build .
+popd
