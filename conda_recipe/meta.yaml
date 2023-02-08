@@ -46,9 +46,13 @@ requirements:
     - r-optparse
     - r-reshape2
     - r-rstan >=2.8.1
+    - r-stantools
     - r-shiny
+    - r-shinyjs
     - r-shinycssloaders
     - r-roxygen2
+    - bioconductor-biobase
+    - bioconductor-dirichletmultinomial
 
   run:
     - r-base
@@ -68,8 +72,12 @@ requirements:
     - r-optparse
     - r-reshape2
     - r-rstan >=2.8.1
+    - r-stantools
     - r-shiny
+    - r-shinyjs
     - r-shinycssloaders
+    - bioconductor-biobase
+    - bioconductor-dirichletmultinomial
 
 test:
   commands:
