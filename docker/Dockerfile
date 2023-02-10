@@ -10,4 +10,4 @@ RUN apt-get update && apt-get install -y git && \
     git clone https://github.com/Bek/leafcutter.git --branch workflows --depth 1
 
 USER $MAMBA_USER
-WORKDIR $HOME/$MAMBA_USER/leafcutter
+WORKDIR $HOME/$MAMBA_USER/leafcutter/scripts
