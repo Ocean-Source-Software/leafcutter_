@@ -5,7 +5,7 @@ RUN micromamba install -y -n base -f /tmp/env.yaml && \
 
 USER root
 
-RUN apt-get install -y git && \
+RUN apt-get update && apt-get install -y git && \
     cd $HOME && \
     git clone https://github.com/Bek/leafcutter.git --branch workflows --depth 1
 
