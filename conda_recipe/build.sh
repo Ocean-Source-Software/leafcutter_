@@ -5,6 +5,7 @@ set -e -x
 mkdir -p $PREFIX/bin
 cp clustering/* $PREFIX/bin
 cp scripts/* $PREFIX/bin
+chmod +x $PREFIX/bin/*
 
 # pushd ./leafcutter
 # # R refuses to build packages that mark themselves as Priority: Recommended
