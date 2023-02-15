@@ -7,12 +7,12 @@ cp clustering/* $PREFIX/bin
 cp scripts/* $PREFIX/bin
 chmod +x $PREFIX/bin/*
 
-# pushd ./leafcutter
-# # R refuses to build packages that mark themselves as Priority: Recommended
-# mv DESCRIPTION DESCRIPTION.old
-# grep -v '^Priority: ' DESCRIPTION.old >DESCRIPTION
+pushd ./leafcutter
+# R refuses to build packages that mark themselves as Priority: Recommended
+mv DESCRIPTION DESCRIPTION.old
+grep -v '^Priority: ' DESCRIPTION.old >DESCRIPTION
 
-# $R -e "install.packages('TailRank', repos='http://R-Forge.R-project.org')
-# "
-# $R CMD INSTALL --build .
-# popd
+$R -e "install.packages('TailRank', repos='http://R-Forge.R-project.org')
+"
+$R CMD INSTALL --build .
+popd
