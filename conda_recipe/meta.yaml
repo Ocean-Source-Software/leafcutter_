@@ -12,6 +12,7 @@ source:
 #  git_url: https://github.com/davidaknowles/lc_conda.git
   git_url: https://github.com/davidaknowles/leafcutter.git
   git_tag: master
+  git_depth: 1
   # You can add a hash for the file here, like md5, sha1 or sha256
   # patches:
    # List any patch files here
@@ -19,77 +20,77 @@ source:
 
 build:
   # If this is a new build for the same version, increment the build number.
-  number: 1
+  number: 3
 
   # This is required to make R link correctly on Linux.
   rpaths:
     - lib/R/lib/
     - lib/
 
-# Suggests: knitr, rmarkdown
-requirements:
-  build:
-    - r-base
-    - r-bh >=1.58.0
-    - r-dt
-    - r-hmisc
-    - r-r.utils
-    - r-rcpp >=0.11.0
-    - r-rcppeigen
-    - r-stanheaders >=2.8.0
-    - r-domc
-    - r-dplyr
-    - r-foreach
-    - r-ggplot2
-    - r-gridextra
-    - r-intervals
-    - r-optparse
-    - r-reshape2
-    - r-rstan >=2.8.1
-    - r-rstantools
-    - r-shiny
-    - r-shinyjs
-    - r-shinycssloaders
-    - r-roxygen2
-    - bioconductor-biobase
-    - bioconductor-dirichletmultinomial
+# # Suggests: knitr, rmarkdown
+# requirements:
+#   build:
+#     - r-base
+#     - r-bh >=1.58.0
+#     - r-dt
+#     - r-hmisc
+#     - r-r.utils
+#     - r-rcpp >=0.11.0
+#     - r-rcppeigen
+#     - r-stanheaders >=2.8.0
+#     - r-domc
+#     - r-dplyr
+#     - r-foreach
+#     - r-ggplot2
+#     - r-gridextra
+#     - r-intervals
+#     - r-optparse
+#     - r-reshape2
+#     - r-rstan >=2.8.1
+#     - r-rstantools
+#     - r-shiny
+#     - r-shinyjs
+#     - r-shinycssloaders
+#     - r-roxygen2
+#     - bioconductor-biobase
+#     - bioconductor-dirichletmultinomial
 
-  run:
-    - r-base
-    - r-bh >=1.58.0
-    - r-dt
-    - r-hmisc
-    - r-r.utils
-    - r-rcpp >=0.11.0
-    - r-rcppeigen
-    - r-stanheaders >=2.8.0
-    - r-domc
-    - r-dplyr
-    - r-foreach
-    - r-ggplot2
-    - r-gridextra
-    - r-intervals
-    - r-optparse
-    - r-reshape2
-    - r-rstan >=2.8.1
-    - r-rstantools
-    - r-shiny
-    - r-shinyjs
-    - r-shinycssloaders
-    - bioconductor-biobase
-    - bioconductor-dirichletmultinomial
+#   run:
+#     - r-base
+#     - r-bh >=1.58.0
+#     - r-dt
+#     - r-hmisc
+#     - r-r.utils
+#     - r-rcpp >=0.11.0
+#     - r-rcppeigen
+#     - r-stanheaders >=2.8.0
+#     - r-domc
+#     - r-dplyr
+#     - r-foreach
+#     - r-ggplot2
+#     - r-gridextra
+#     - r-intervals
+#     - r-optparse
+#     - r-reshape2
+#     - r-rstan >=2.8.1
+#     - r-rstantools
+#     - r-shiny
+#     - r-shinyjs
+#     - r-shinycssloaders
+#     - bioconductor-biobase
+#     - bioconductor-dirichletmultinomial
 
-test:
-  commands:
-    # You can put additional test commands to be run here.
-    - $R -e "library('leafcutter')"  # [not win]
-    - "\"%R%\" -e \"library('leafcutter')\""  # [win]
+# test:
+#   commands:
+#     # You can put additional test commands to be run here.
+#     - $R -e "library('leafcutter')"  # [not win]
+#     - "\"%R%\" -e \"library('leafcutter')\""  # [win]
 
-  # You can also put a file called run_test.py, run_test.sh, or run_test.bat
-  # in the recipe that will be run at test time.
+#   # You can also put a file called run_test.py, run_test.sh, or run_test.bat
+#   # in the recipe that will be run at test time.
 
-  # requires:
-    # Put any additional test requirements here.
+#   # requires:
+#     # Put any additional test requirements here.
 
 about:
   home: https://CRAN.R-project.org/package=leafcutter
