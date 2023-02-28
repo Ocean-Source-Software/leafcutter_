@@ -53,7 +53,7 @@ requirements:
     - r-shinycssloaders
     - r-roxygen2
     - bioconductor-biobase
-    - bioconductor-dirichletmultinomial
+    - bioconductor-dirichletmultinomial =>1.40
 
   run:
     - r-base >=4.2.2
@@ -78,7 +78,7 @@ requirements:
     - r-shinyjs
     - r-shinycssloaders
     - bioconductor-biobase
-    - bioconductor-dirichletmultinomial
+    - bioconductor-dirichletmultinomial =>1.40
 
 test:
   commands:
