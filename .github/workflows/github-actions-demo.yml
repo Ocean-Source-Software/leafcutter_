@@ -33,7 +33,7 @@ jobs:
 
       - name: build r-leafcutter conda package
         run: |
-          mamba env List
+          mamba env list
           anaconda
           export ANACONDA_API_TOKEN=${{ secrets.ANAKONDA_TOKEN }}
           # conda mambabuild .
