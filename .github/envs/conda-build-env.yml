@@ -1,6 +1,7 @@
 # This environment is needed to build Leafcutter conda package with boa
-name: foobar
+name: boabuild
 channels:
   - conda-forge
 dependencies:
   - mamba
+  - boa

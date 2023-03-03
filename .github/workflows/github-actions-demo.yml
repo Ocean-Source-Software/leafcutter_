@@ -22,21 +22,25 @@ jobs:
         uses: actions/checkout@v3
 
       - name: create environment with mamba
-        uses: mamba-org/provision-with-micromamba@main
+        uses: conda-incubator/setup-miniconda@v2
         with:
-          environment-file: .github/envs/conda-build-env.yml
-          cache-downloads: true
-          cache-env: true
+          python-version: 3.10
+          channels: conda-forge,defaults
+          channel-priority: true
+          auto-activate-base: true
+          activate-environment: ""
+          mamba-version: "*"
 
       - name: build r-leafcutter conda package
+        shell: bash -el {0}
         run: |
-          mamba init
           mamba create -n boabuild python=3.10
           mamba activate boabuild
           mamba install -y boa -c conda-forge
           conda mambabuild conda_recipe
 
       - name: push buid to anaconda
+        shell: bash -el {0}
         run: |
           mamba install -y anaconda -c anaconda
           export ANACONDA_API_TOKEN=${{ secrets.ANACONDA_TOKEN }}
