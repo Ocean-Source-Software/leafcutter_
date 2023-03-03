@@ -5,7 +5,7 @@ on:
       - workflows
 
 jobs:
-  create-env:
+  bouild-upload-leafcutter:
     name: ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
     defaults:
@@ -33,4 +33,6 @@ jobs:
 
       - name: build r-leafcutter conda package
         run: |
+          export ANACONDA_API_TOKEN=${{ secrets.ANAKONDA_TOKEN }}
+          conda config --set anaconda_upload yes
           conda mambabuild .
