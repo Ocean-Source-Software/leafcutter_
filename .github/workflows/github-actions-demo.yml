@@ -26,12 +26,12 @@ jobs:
         uses: mamba-org/provision-with-micromamba@main
 
         with:
-          channels: conda-forge,bioconda,defaults
+          channels: conda-forge,bioconda,defaults,anaconda
           environment-file: .github/envs/conda-build-env.yml
           cache-downloads: true
           cache-env: true
           extra-specs: |
-            python=3.8
+            python=3.10
 
       - name: build r-leafcutter conda package
         run: |
