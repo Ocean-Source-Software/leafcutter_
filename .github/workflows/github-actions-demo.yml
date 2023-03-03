@@ -30,7 +30,8 @@ jobs:
           environment-file: .github/envs/conda-build-env.yml
           cache-downloads: true
           cache-env: true
-          extra-specs: python=3.10
+          extra-specs: |
+            python=3.10
 
       - name: build r-leafcutter conda package
         run: |
