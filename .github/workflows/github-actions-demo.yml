@@ -11,7 +11,6 @@ jobs:
     defaults:
       run:
         shell: bash -l {0}
-        working-directory: conda_recipe
 
     strategy:
       fail-fast: false
@@ -31,14 +30,9 @@ jobs:
           cache-downloads: true
           cache-env: true
 
-      # - name: build r-leafcutter conda package
-      - name: Setup upterm session
-        uses: lhotari/action-upterm@v1
-        with:
-          limit-access-to-actor: true
-          limit-access-to-users: Bek
-        #run: |
-        # micromamba env list
-        # export ANACONDA_API_TOKEN=${{ secrets.ANACONDA_TOKEN }}
-        # conda mambabuild .
-        # anaconda upload --label ${{ github.ref_name }} /usr/share/miniconda/envs/boabuild/conda-bld/linux-64/*.tar.bz2
+      - name: build r-leafcutter conda package
+        run: |
+          micromamba env list
+          conda mambabuild conda_recipe
+          export ANACONDA_API_TOKEN=${{ secrets.ANACONDA_TOKEN }}
+          anaconda upload --label ${{ github.ref_name }} /usr/share/miniconda/envs/boabuild/conda-bld/linux-64/*.tar.bz2
