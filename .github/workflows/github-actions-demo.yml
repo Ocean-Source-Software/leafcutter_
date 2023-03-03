@@ -28,7 +28,7 @@ jobs:
           mamba-version: "*"
           channels: conda-forge,bioconda,defaults
           auto-activate-base: false
-          activate-environment: base
+          activate-environment: boabuild
           environment-file: .github/envs/conda-build-env.yml
 
       - name: check solution

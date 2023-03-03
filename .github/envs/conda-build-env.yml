@@ -1,9 +1,8 @@
 # This environment is needed to build Leafcutter conda package with boa
-name: base
+name: boabuild
 channels:
   - conda-forge
   - bioconda
   - defaults
 dependencies:
-  - python=2.7
   - boa
