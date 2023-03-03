@@ -27,7 +27,6 @@ jobs:
 
         with:
           channels: conda-forge,bioconda,defaults
-          activate-name: boabuild
           environment-file: .github/envs/conda-build-env.yml
           cache-downloads: true
           chache-env: true
