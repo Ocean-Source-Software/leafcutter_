@@ -29,8 +29,9 @@ jobs:
           channels: conda-forge,bioconda,defaults
           auto-activate-base: false
           activate-environment: base
-          environment-file: .github/conda-build-env.yml
+          environment-file: ../.github/conda-build-env.yml
 
       - name: check solution
         run: |
           mamba list
+          pwd
