@@ -29,7 +29,7 @@ jobs:
           channels: conda-forge,bioconda,defaults
           auto-activate-base: false
           activate-environment: base
-          environment-file: ../.github/conda-build-env.yml
+          environment-file: .github/envs/conda-build-env.yml
 
       - name: check solution
         run: |
