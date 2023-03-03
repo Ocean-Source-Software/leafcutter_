@@ -29,7 +29,7 @@ jobs:
           channels: conda-forge,bioconda,defaults
           environment-file: .github/envs/conda-build-env.yml
           cache-downloads: true
-          chache-env: true
+          cache-env: true
 
       - name: build r-leafcutter conda package
         run: |
