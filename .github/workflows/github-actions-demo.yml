@@ -28,15 +28,13 @@ jobs:
           channels: conda-forge,defaults
           channel-priority: true
           auto-activate-base: true
-          activate-environment: true
+          activate-environment: boabuild
           mamba-version: "*"
 
       - name: build r-leafcutter conda package
         shell: bash -el {0}
         run: |
-          mamba create -n boabuild python=3.10
-          mamba activate boabuild
-          mamba install -y boa -c conda-forge
+          mamba install -y boa
           conda mambabuild conda_recipe
 
       - name: push buid to anaconda
