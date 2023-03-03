@@ -1,5 +1,5 @@
 # This environment is needed to build Leafcutter conda package with boa
-name: base
+name: temp
 channels:
   - conda-forge
   - defaults
