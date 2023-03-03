@@ -30,6 +30,7 @@ jobs:
 
       - name: build r-leafcutter conda package
         run: |
+          mamba init
           mamba create -n boabuild python=3.10
           mamba activate boabuild
           mamba install -y boa -c conda-forge
