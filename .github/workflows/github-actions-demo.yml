@@ -31,7 +31,6 @@ jobs:
           activate-environment: boabuild
           environment-file: .github/envs/conda-build-env.yml
 
-      - name: check solution
+      - name: build r-leafcutter conda package
         run: |
-          mamba list
-          pwd
+          conda mambabuild .
