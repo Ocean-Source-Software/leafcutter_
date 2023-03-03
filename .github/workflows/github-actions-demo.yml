@@ -23,16 +23,17 @@ jobs:
 
       - name: create environment with mamba
         uses: mamba-org/provision-with-micromamba@main
-
         with:
-          channels: conda-forge,bioconda,defaults,anaconda
-          environment-file: .github/envs/conda-build-env.yml
           cache-downloads: true
           cache-env: true
 
       - name: build r-leafcutter conda package
+        working-directory: conda-recipe
         run: |
-          micromamba env list
-          conda mambabuild conda_recipe
+          mamba create -n boabuild python=3.10
+          mamba activate boabuild
+          mamba install boa
+          conda mambabuild .
+          mamba install anaconda
           export ANACONDA_API_TOKEN=${{ secrets.ANACONDA_TOKEN }}
           anaconda upload --label ${{ github.ref_name }} /usr/share/miniconda/envs/boabuild/conda-bld/linux-64/*.tar.bz2

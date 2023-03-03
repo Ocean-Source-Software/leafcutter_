@@ -2,10 +2,8 @@
 name: boabuild
 channels:
   - conda-forge
-  - bioconda
   - defaults
-  - anaconda
 dependencies:
-  - boa=0.14
+  - python=3.10
+  - boa
   - anaconda
-  - mamba
