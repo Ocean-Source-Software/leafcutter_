@@ -2,7 +2,5 @@
 name: temp
 channels:
   - conda-forge
-  - defaults
-  - anaconda
 dependencies:
-  - anaconda
+  - mamba
