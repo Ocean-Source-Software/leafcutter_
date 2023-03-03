@@ -54,7 +54,7 @@ requirements:
     - r-roxygen2
     - bioconductor-biobase
     - bioconductor-dirichletmultinomial >=1.40
-    - python >=2.7, <3
+    - python >=2.7,<3
 
   run:
     - r-base >=4.2.2
@@ -80,7 +80,7 @@ requirements:
     - r-shinycssloaders
     - bioconductor-biobase
     - bioconductor-dirichletmultinomial >=1.40
-    - python >=2.7, <3
+    - python >=2.7,<3
 
 test:
   commands:
