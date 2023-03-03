@@ -33,7 +33,7 @@ jobs:
 
       - name: build r-leafcutter conda package
         run: |
-          mamba env list
+          micromamba env list
           export ANACONDA_API_TOKEN=${{ secrets.ANACONDA_TOKEN }}
           conda mambabuild .
           anaconda upload --label ${{ github.ref_name }} /usr/share/miniconda/envs/boabuild/conda-bld/linux-64/*.tar.bz2
