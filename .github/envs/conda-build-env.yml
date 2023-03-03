@@ -5,6 +5,6 @@ channels:
   - bioconda
   - defaults
 dependencies:
-  - boa
+  - boa=0.14
   - anaconda
   - mamba
