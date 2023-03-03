@@ -47,5 +47,5 @@ jobs:
       - name: build docker image
         working-directory: docker
         run: |
-          sed -i 's/r-leafcutter/oceansource\/${{github.ref_name}}\/workflows::r-leafcutter/g'
+          sed -i 's/r-leafcutter/oceansource\/${{github.ref_name}}\/workflows::r-leafcutter/g' env.yaml
           cat env.yaml
