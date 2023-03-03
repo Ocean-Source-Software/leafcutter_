@@ -3,6 +3,7 @@ name: boabuild
 channels:
   - conda-forge
   - defaults
+  - anaconda
 dependencies:
   - python=3.10
   - boa
