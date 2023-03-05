@@ -42,7 +42,7 @@ jobs:
         run: |
           mamba install -y anaconda-client -c anaconda
           export ANACONDA_API_TOKEN=${{ secrets.ANACONDA_TOKEN }}
-          anaconda upload --label ${{ github.ref_name }} /usr/share/miniconda/envs/boabuild/conda-bld/linux-64/*.tar.bz2
+          anaconda upload --force --label ${{ github.ref_name }} /usr/share/miniconda/envs/boabuild/conda-bld/linux-64/*.tar.bz2
 
       - name: set r-leafcutter label in env.yaml
         working-directory: docker
