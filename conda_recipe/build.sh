@@ -5,6 +5,7 @@ set -e -x
 mkdir -p $PREFIX/bin
 cp clustering/* $PREFIX/bin
 cp scripts/* $PREFIX/bin
+cp leafviz/prepare_results.R $PREFIX/bin
 chmod +x $PREFIX/bin/*
 
 pushd ./leafcutter
