@@ -70,8 +70,10 @@ jobs:
       #     context: docker
       #     push: true
       #     tags: oceansource/leafcutter:${{github.ref_name}}
-      - name: run leafcutter pipeline
+      - name: setup nextflow
         uses: nf-core/setup-nextflow@v1.2.0
+
+      - name: run leafcutter pipeline
         run: |
           nextflow run nextflow/leafcutter-local-docker.nf
           cd test-outputs && ls -la
