@@ -23,15 +23,15 @@ jobs:
         with:
           ref: ${{ github.ref_name }}
 
-      # - name: create environment with mamba
-      #   uses: conda-incubator/setup-miniconda@v2
-      #   with:
-      #     python-version: "3.10"
-      #     channels: conda-forge,bioconda,defaults
-      #     channel-priority: true
-      #     auto-activate-base: true
-      #     activate-environment: boabuild
-      #     mamba-version: "*"
+      - name: create environment with mamba
+        uses: conda-incubator/setup-miniconda@v2
+        with:
+          python-version: "3.10"
+          channels: conda-forge,bioconda,defaults
+          channel-priority: true
+          auto-activate-base: true
+          activate-environment: boabuild
+          mamba-version: "*"
 
       # - name: build r-leafcutter conda package
       #   shell: bash -el {0}
@@ -70,10 +70,17 @@ jobs:
       #     context: docker
       #     push: true
       #     tags: oceansource/leafcutter:${{github.ref_name}}
-      - name: setup nextflow
-        uses: nf-core/setup-nextflow@v1.2.0
+      # - name: setup nextflow
+      #   uses: nf-core/setup-nextflow@v1.2.0
 
       - name: run leafcutter pipeline
         run: |
-          nextflow run nextflow/leafcutter-local-docker.nf
+          # nextflow run nextflow/leafcutter-local-docker.nf
           cd test-outputs && ls -la
+      - name: setup pytest-workflow
+        run: |
+          mamba install pytest-workflow
+
+      - name: run test
+        run: |
+          pytest -tag touch
