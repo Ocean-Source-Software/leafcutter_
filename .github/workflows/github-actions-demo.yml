@@ -70,13 +70,14 @@ jobs:
       #     context: docker
       #     push: true
       #     tags: oceansource/leafcutter:${{github.ref_name}}
-      # - name: setup nextflow
-      #   uses: nf-core/setup-nextflow@v1.2.0
+      - name: setup nextflow
+        uses: nf-core/setup-nextflow@v1.2.0
 
-      - name: run leafcutter pipeline
-        run: |
-          # nextflow run nextflow/leafcutter-local-docker.nf
-          cd test-outputs && ls -la
+      # - name: run leafcutter pipeline
+      #   run: |
+      #     nextflow run nextflow/leafcutter-local-docker.nf
+      #     cd test-outputs && ls -la
+
       - name: setup pytest-workflow
         run: |
           mamba install pytest-workflow
