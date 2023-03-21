@@ -3,23 +3,23 @@
     - functional
   command: nextflow run functional/workflows/test_junc_files.nf
   files:
-    - path: RNA.NA06984_CEU.chr1.bam.junc
+    - path: test-outputs/RNA.NA06984_CEU.chr1.bam.junc
       md5sum: 3c734c9528c9e4f74cf81e5ed78d4fe3
-    - path: RNA.NA06985_CEU.chr1.bam.junc
+    - path: test-outputs/RNA.NA06985_CEU.chr1.bam.junc
       md5sum: 0a90aee7c7fc248f1ddfa88ea9e1b410
-    - path: RNA.NA06986_CEU.chr1.bam.junc
+    - path: test-outputs/RNA.NA06986_CEU.chr1.bam.junc
       md5sum: 49ddaeffe9415790b64c8b4765b16ead
-    - path: RNA.NA06989_CEU.chr1.bam.junc
+    - path: test-outputs/RNA.NA06989_CEU.chr1.bam.junc
       md5sum: e18ed78aedf732e838657a32b3611361
-    - path: RNA.NA06994_CEU.chr1.bam.junc
+    - path: test-outputs/RNA.NA06994_CEU.chr1.bam.junc
       md5sum: e9c6043b18d5b583667129498700ead0
-    - path: RNA.NA18486_YRI.chr1.bam.junc
+    - path: test-outputs/RNA.NA18486_YRI.chr1.bam.junc
       md5sum: b5952977d25fc2ec2492cd9c15c8758e
-    - path: RNA.NA18487_YRI.chr1.bam.junc
+    - path: test-outputs/RNA.NA18487_YRI.chr1.bam.junc
       md5sum: a93219eb945e5bebccc2c8b54ba82d10
-    - path: RNA.NA18488_YRI.chr1.bam.junc
+    - path: test-outputs/RNA.NA18488_YRI.chr1.bam.junc
       md5sum: 3b6186d30cb11d2aa34f093ff8034df3
-    - path: RNA.NA18489_YRI.chr1.bam.junc
+    - path: test-outputs/RNA.NA18489_YRI.chr1.bam.junc
       md5sum: 9aeb300522f9dbf9d55bec3ce3c24c04
-    - path: RNA.NA18498_YRI.chr1.bam.junc
+    - path: test-outputs/RNA.NA18498_YRI.chr1.bam.junc
       md5sum: 45f8a9d59ce59069cd98f921fcc0b77f
