@@ -1,7 +1,7 @@
 - name: Test junction file creation step
   tags:
     - functional
-  command: nextflow run workflows/test_junc_files.nf
+  command: nextflow run functional/workflows/test_junc_files.nf
   files:
     - path: RNA.NA06984_CEU.chr1.bam.junc
       md5sum: 3c734c9528c9e4f74cf81e5ed78d4fe3
