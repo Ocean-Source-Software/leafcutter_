@@ -1,6 +1,0 @@
-- name: Touch a file
-  tags:
-    - touch
-  command: touch test.file
-  files:
-    - path: test.file
