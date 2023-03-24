@@ -4,3 +4,4 @@
   command: nextflow run functional/workflows/test_cluster.nf
   files:
     - path: test-outputs/leafcutter_perind_numers.counts.gz
+      md5sum: 9b7738fc04e10463c3dd62a4da47193a
