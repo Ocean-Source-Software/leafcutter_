@@ -4,22 +4,22 @@
   command: nextflow run functional/workflows/test_junc_files.nf
   files:
     - path: test-outputs/RNA.NA06984_CEU.chr1.bam.junc.sorted
-      md5sum: 3c734c9528c9e4f74cf81e5ed78d4fe3
+      md5sum: 471f9738d8b4a65db847b5e286b372b8
     - path: test-outputs/RNA.NA06985_CEU.chr1.bam.junc.sorted
-      md5sum: 0a90aee7c7fc248f1ddfa88ea9e1b410
+      md5sum: 1b8222090c154f2296599aa4339f6611
     - path: test-outputs/RNA.NA06986_CEU.chr1.bam.junc.sorted
-      md5sum: 49ddaeffe9415790b64c8b4765b16ead
+      md5sum: 0648cf30b365b9266db3a07674074a13
     - path: test-outputs/RNA.NA06989_CEU.chr1.bam.junc.sorted
-      md5sum: e18ed78aedf732e838657a32b3611361
+      md5sum: 7accd313d52f153993707685b96884b8
     - path: test-outputs/RNA.NA06994_CEU.chr1.bam.junc.sorted
-      md5sum: e9c6043b18d5b583667129498700ead0
+      md5sum: 13d8f5b6907b39794276bea28a940322
     - path: test-outputs/RNA.NA18486_YRI.chr1.bam.junc.sorted
-      md5sum: b5952977d25fc2ec2492cd9c15c8758e
+      md5sum: feb71f123265b0916d414db88b26e07b
     - path: test-outputs/RNA.NA18487_YRI.chr1.bam.junc.sorted
-      md5sum: a93219eb945e5bebccc2c8b54ba82d10
+      md5sum: 070a2e2f59964a1760ca4a41a6aa8428
     - path: test-outputs/RNA.NA18488_YRI.chr1.bam.junc.sorted
-      md5sum: 3b6186d30cb11d2aa34f093ff8034df3
+      md5sum: 9d26910f62eae46d10d617a68bb8ddfe
     - path: test-outputs/RNA.NA18489_YRI.chr1.bam.junc.sorted
-      md5sum: 9aeb300522f9dbf9d55bec3ce3c24c04
+      md5sum: 87b3718f6fdb578b11c56c4aa41565d4
     - path: test-outputs/RNA.NA18498_YRI.chr1.bam.junc.sorted
-      md5sum: 45f8a9d59ce59069cd98f921fcc0b77f
+      md5sum: 7b99e862151885b8da6aa8b2ca01f100
