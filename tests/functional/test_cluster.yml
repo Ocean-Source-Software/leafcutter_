@@ -1,0 +1,6 @@
+- name: Test junction file creation step
+  tags:
+    - functional
+  command: nextflow run functional/workflows/test_cluster.nf
+  files:
+    - path: test-outputs/leafcutter_perind_numers.counts.gz
