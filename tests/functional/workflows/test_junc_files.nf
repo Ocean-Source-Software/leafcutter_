@@ -44,6 +44,6 @@ workflow {
   groupA = Channel.fromPath("${params.bamsDir}/*${params.bamsIdentifierGroupA}*.bam")
   groupB = Channel.fromPath("${params.bamsDir}/*${params.bamsIdentifierGroupB}*.bam")
   allBams = groupA.concat(groupB)
-  result = makeJuncFiles(allBams)
-  sortJuncFiles(result)
+  juncs = makeJuncFiles(allBams)
+  sortJuncFiles(juncs)
 }
