@@ -22,10 +22,28 @@ process makeJuncFiles {
   """
 }
 
+process sortJuncFiles {
+  
+  publishDir 'test-outputs'
+  cpus 2
+  container 'oceansource/leafcutter:workflows'
+  containerOptions = "--user root"
+  input:
+    path juncFile
+
+  output:
+    path "${juncFile}.sorted"
+
+  """
+  sort -n -k2,2 -k3,3 -k5,5 ${juncFile} > ${juncFile}.sorted
+  """
+}
+
+
 workflow {
   groupA = Channel.fromPath("${params.bamsDir}/*${params.bamsIdentifierGroupA}*.bam")
   groupB = Channel.fromPath("${params.bamsDir}/*${params.bamsIdentifierGroupB}*.bam")
   allBams = groupA.concat(groupB)
-  result = makeJuncFiles(allBams).collect()
-  result.view()
+  result = makeJuncFiles(allBams)
+  sortJuncFiles(result)
 }
