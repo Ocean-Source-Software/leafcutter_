@@ -13,7 +13,7 @@ process sortJuncFiles {
     path "${juncFile}.sorted"
 
   """
-  sort -n -k2,2, -k3,3 -k5,5 ${juncFile} > ${juncFile}.sorted
+  sort -n -k2,2 -k3,3 -k5,5 ${juncFile} > ${juncFile}.sorted
   """
 }
 
