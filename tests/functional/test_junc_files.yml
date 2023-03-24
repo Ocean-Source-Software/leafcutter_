@@ -2,7 +2,7 @@
   tags:
     - functional
   command: >-
-    nextflow run functional/workflows/test_junc_files.nf && \
+    nextflow run functional/workflows/test_junc_files.nf &&
     nextflow run functional/workflows/sort_junc_files.nf
   files:
     - path: test-outputs/RNA.NA06984_CEU.chr1.bam.junc.sorted
