@@ -19,5 +19,5 @@ process sortJuncFiles {
 
 workflow {
   juncs = Channel.fromPath("${params.juncsDir}/*.junc")
-  result = sortJuncFiles(allBams)
+  result = sortJuncFiles(juncs)
 }
