@@ -1,4 +1,4 @@
-- name: Test junction file creation step
+- name: Test cluster perind file creation step
   tags:
     - functional
   command: nextflow run functional/workflows/test_cluster.nf
