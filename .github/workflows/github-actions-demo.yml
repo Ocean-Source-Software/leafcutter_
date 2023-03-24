@@ -6,7 +6,7 @@ on:
 
 jobs:
   bouild-upload-leafcutter:
-    name: ${{ matrix.os }}
+    name: ${{ matrix.os }}-build
     runs-on: ${{ matrix.os }}
     defaults:
       run:
