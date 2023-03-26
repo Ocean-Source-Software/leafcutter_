@@ -35,8 +35,6 @@ process sortPerindFile {
   """
 }
 
-// Run the workflow
-
 workflow {
   juncs = Channel.fromPath("${params.juncsDir}/*.junc")
   perind_file = cluster(juncs.collect())

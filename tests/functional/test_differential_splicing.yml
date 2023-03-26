@@ -1,0 +1,11 @@
+- name: Test differential splicing
+  tags:
+    - functional
+  command: nextflow run functional/workflows/test_differential_splicing.nf
+  files:
+    - path: test-outputs/leafcutter_ds_effect_sizes.txt
+      md5sum: 45cbe572341b8a7878258367202276c2
+    - path: test-outputs/leafcutter_ds_cluster_significance.txt
+      md5sum: 45cbe572341b8a7878258367202276c3
+    - path: test-outputs/groups_file.txt
+      md5sum: 45cbe572341b8a7878258367202276c4
