@@ -35,5 +35,6 @@ process differential_splicing {
 workflow {
     groupA = Channel.fromPath("${params.bamsDir}/*${params.bamsIdentifierGroupA}*.bam")
     groupB = Channel.fromPath("${params.bamsDir}/*${params.bamsIdentifierGroupB}*.bam")
-    differential_splicing(groupA.collect(), groupB.collect(), params.perind_file, params.bamsIdentifierGroupA, params.bamsIdentifierGroupB) 
+    perind_file = Channel.fromPath("${params.perindFile}")
+    differential_splicing(groupA.collect(), groupB.collect(), perind_file, params.bamsIdentifierGroupA, params.bamsIdentifierGroupB) 
 }
