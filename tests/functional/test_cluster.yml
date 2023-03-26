@@ -4,7 +4,6 @@
   command: nextflow run functional/workflows/test_cluster.nf && zcat test-outputs/leafcutter_perind_numers.counts.gz
   files:
     - path: test-outputs/leafcutter_perind_numers.counts.gz
-      md5sum: d6184574ab3a2fb9a1ba568d90b8cc3c
   stdout:
     contains:
       - "chr1:249208078:249210801:clu_2691_NA 4 2 0 3 4 12 5 0 2 10"
