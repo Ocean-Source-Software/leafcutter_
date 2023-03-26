@@ -31,7 +31,7 @@ process sortPerindFile {
     path "${perind_file}.sorted"
 
   """
-  sort -n -t ':' -k2,2 -k3,3 ${perind_file} > ${perind_file}.sorted
+  zcat ${perind_file} | sort -n -t ':' -k2,2 -k3,3 > ${perind_file}.sorted
   """
 }
 
