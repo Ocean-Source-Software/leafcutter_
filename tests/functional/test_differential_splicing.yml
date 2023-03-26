@@ -4,8 +4,8 @@
   command: nextflow run functional/workflows/test_differential_splicing.nf
   files:
     - path: test-outputs/leafcutter_ds_effect_sizes.txt
-      md5sum: 45cbe572341b8a7878258367202276c2
+      md5sum: 6c0bee544e149f28b88a7dd1068dd98c
     - path: test-outputs/leafcutter_ds_cluster_significance.txt
-      md5sum: 45cbe572341b8a7878258367202276c3
+      md5sum: 508c79c195aa8dcf61b8b1f05dc255ff
     - path: test-outputs/groups_file.txt
-      md5sum: 45cbe572341b8a7878258367202276c4
+      md5sum: 886479a52b4e007abf10f21977bca864
