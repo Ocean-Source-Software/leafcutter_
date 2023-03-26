@@ -18,9 +18,27 @@ process cluster {
   """
 }
 
+process sortPerindFile {
+  
+  publishDir 'test-outputs'
+  cpus 2
+  container 'oceansource/leafcutter:workflows'
+  containerOptions = "--user root"
+  input:
+    path perind_file
+
+  output:
+    path "${perind_file}.sorted"
+
+  """
+  sort -n -t ':' -k2,2 -k3,3 ${perind_file} > ${perind_file}.sorted
+  """
+}
+
 // Run the workflow
 
 workflow {
   juncs = Channel.fromPath("${params.juncsDir}/*.junc")
-  cluster(juncs.collect())
+  perind_file = cluster(juncs.collect())
+  sortPerindFile(perind_file)
 }
