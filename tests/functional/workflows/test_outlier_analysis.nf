@@ -23,5 +23,5 @@ process outlierAnalysis {
 
 workflow {
     perind_file = Channel.fromPath(params.perind_file)
-    outlierAnalysis(numers_counts)
+    outlierAnalysis(perind_file)
 }
