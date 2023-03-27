@@ -1,0 +1,11 @@
+- name: Test outlier analysis
+  tags:
+    - functional
+  command: nextflow run functional/workflows/test_outlier_analysis.nf
+  files:
+    - path: test-outputs/leafcutter_outlier_clusterPvals.txt
+      md5sum: 9f8da2f7587b9da88589ae7cb749141f
+    - path: test-outputs/leafcutter_outlier_effSize.txt
+      md5sum: 22ea7dc7519853c1de183039cfbab771
+    - path: test-outputs/leafcutter_outlier_pVals.txt
+      md5sum: 27cd0ac72e2877ac2b09ec39785cafc3

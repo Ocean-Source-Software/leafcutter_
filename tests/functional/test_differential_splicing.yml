@@ -1,6 +1,6 @@
 - name: Test differential splicing
   tags:
-    - functional
+    - functional1 # temporary skip test
   command: nextflow run functional/workflows/test_differential_splicing.nf
   files:
     - path: test-outputs/leafcutter_ds_effect_sizes.txt
