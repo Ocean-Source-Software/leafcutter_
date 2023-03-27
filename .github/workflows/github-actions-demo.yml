@@ -85,4 +85,4 @@ jobs:
       - name: run test
         working-directory: tests
         run: |
-          pytest --tag functional
+          pytest --tag functional-outlier
