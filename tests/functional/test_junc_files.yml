@@ -1,6 +1,6 @@
 - name: Test junction file creation step
   tags:
-    - functional1 # temporary skip of this test
+    - functional
   command: nextflow run functional/workflows/test_junc_files.nf
   files:
     - path: test-outputs/RNA.NA06984_CEU.chr1.bam.junc.sorted
