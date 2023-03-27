@@ -3,7 +3,7 @@ params.perind_file = 'gs://leafcutter-inputs/cached-intermediary-outputs/leafcut
 process outlierAnalysis {
 
   publishDir 'test-outputs'
-  cpus 2
+  cpus 1
   container 'oceansource/leafcutter:workflows'
   containerOptions = '--user root'
 
@@ -16,7 +16,7 @@ process outlierAnalysis {
     path '*outlier_pVals.txt'
   
   """
-  leafcutterMD.R --num_threads 8 $numers_counts
+  leafcutterMD.R --num_threads 1 $numers_counts
   """
    
 }
