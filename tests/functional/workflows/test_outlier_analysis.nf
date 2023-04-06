@@ -35,7 +35,7 @@ process sortOutlierFiles {
         path '*.txt.sorted'
     
     """
-    sort -k1,1 -k2,2n -k3,3n $outlier_file > ${outlier_file}.sorted
+    sort -t ':' -k2,2 -k3,3 $outlier_file > ${outlier_file}.sorted
     """
      
 }
