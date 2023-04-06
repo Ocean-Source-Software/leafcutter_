@@ -21,7 +21,7 @@ process outlierAnalysis {
    
 }
 
-sortOutlierFiles {
+process sortOutlierFiles {
 
     publishDir 'test-outputs'
     cpus 2
@@ -42,6 +42,5 @@ sortOutlierFiles {
 
 workflow {
     perind_file = Channel.fromPath(params.perind_file)
-    (f1, f2, f3) = outlierAnalysis(perind_file)
-    sortOutlierFiles(Channel.fromPath([f1, f2, f3]))
+    outlierAnalysis(perind_file) | flatten | sortOutlierFiles
 }
