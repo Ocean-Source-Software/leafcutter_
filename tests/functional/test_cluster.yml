@@ -1,6 +1,6 @@
 - name: Test cluster perind file creation step
   tags:
-    - functional
+    - functional1
   command: nextflow run functional/workflows/test_cluster.nf
   files:
     - path: test-outputs/leafcutter_perind_numers.counts.gz.sorted

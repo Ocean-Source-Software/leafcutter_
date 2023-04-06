@@ -16,12 +16,32 @@ process outlierAnalysis {
     path '*outlier_pVals.txt'
   
   """
-  leafcutterMD.R --num_threads 1 $numers_counts
+  leafcutterMD.R --num_threads 8 $numers_counts
   """
    
 }
 
+sortOutlierFiles {
+
+    publishDir 'test-outputs'
+    cpus 2
+    container 'oceansource/leafcutter:workflows'
+    containerOptions = '--user root'
+    
+    input:
+        path outlier_file
+
+    output:
+        path '*.txt.sorted'
+    
+    """
+    sort -k1,1 -k2,2n -k3,3n $outlier_file > ${outlier_file}.sorted
+    """
+     
+}
+
 workflow {
     perind_file = Channel.fromPath(params.perind_file)
-    outlierAnalysis(perind_file)
+    res = outlierAnalysis(perind_file)
+    sortOutlierFiles(res)
 }
