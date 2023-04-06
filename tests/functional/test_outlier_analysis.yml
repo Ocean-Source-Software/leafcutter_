@@ -6,6 +6,6 @@
     - path: test-outputs/leafcutter_outlier_clusterPvals.txt.sorted
       md5sum: 371284e44df39a26348fb753cc69e65c
     - path: test-outputs/leafcutter_outlier_effSize.txt.sorted
-      md5sum: 903b0dc2f873e34aaf7628696cb875e2
+      md5sum: 39acaa24bade5f1fff1a13c2485fbad1
     - path: test-outputs/leafcutter_outlier_pVals.txt.sorted
-      md5sum: 2cec943d204f2859d42c52cf965f4258
+      md5sum: fa2930c528b7eceff13e87b1b2b1be44
