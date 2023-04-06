@@ -42,5 +42,6 @@ sortOutlierFiles {
 
 workflow {
     perind_file = Channel.fromPath(params.perind_file)
-    outlierAnalysis(perind_file).collect() | flatten | sortOutlierFiles
+    (f1, f2, f3) = outlierAnalysis(perind_file)
+    sortOutlierFiles(Channel.fromPath([f1, f2, f3]))
 }
