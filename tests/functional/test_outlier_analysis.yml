@@ -3,9 +3,9 @@
     - functional
   command: nextflow run functional/workflows/test_outlier_analysis.nf
   files:
-    - path: test-outputs/leafcutter_outlier_clusterPvals.txt
+    - path: test-outputs/leafcutter_outlier_clusterPvals.txt.sorted
       md5sum: 034263b94110d3241a1f90f4e4a91f03
-    - path: test-outputs/leafcutter_outlier_effSize.txt
+    - path: test-outputs/leafcutter_outlier_effSize.txt.sorted
       md5sum: 149338be1e3ac31e45daae697dbc22bb
-    - path: test-outputs/leafcutter_outlier_pVals.txt
+    - path: test-outputs/leafcutter_outlier_pVals.txt.sorted
       md5sum: 207ef0fa10a13fff9b57aed80af64970
