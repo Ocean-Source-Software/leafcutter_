@@ -1,0 +1,25 @@
+- name: Test full Leafcutter pipeline
+  tags:
+    - integration
+  command: nextflow run integration/workflows/test_leafcutter.nf
+  files:
+    - path: test-outputs/RNA.NA06984_CEU.chr1.bam.junc
+    - path: test-outputs/RNA.NA06985_CEU.chr1.bam.junc
+    - path: test-outputs/RNA.NA06986_CEU.chr1.bam.junc
+    - path: test-outputs/RNA.NA06989_CEU.chr1.bam.junc
+    - path: test-outputs/RNA.NA06994_CEU.chr1.bam.junc
+    - path: test-outputs/RNA.NA18486_YRI.chr1.bam.junc
+    - path: test-outputs/RNA.NA18487_YRI.chr1.bam.junc
+    - path: test-outputs/RNA.NA18488_YRI.chr1.bam.junc
+    - path: test-outputs/RNA.NA18489_YRI.chr1.bam.junc
+    - path: test-outputs/RNA.NA18498_YRI.chr1.bam.junc
+    - path: test-outputs/leafcutter_perind_numers.counts.gz
+    - path: test-outputs/leafcutter_outlier_clusterPvals.txt
+    - path: test-outputs/leafcutter_outlier_effSize.txt
+    - path: test-outputs/leafcutter_outlier_pVals.txt
+    - path: test-outputs/leafcutter_ds_effect_sizes.txt
+      md5sum: 6c0bee544e149f28b88a7dd1068dd98c
+    - path: test-outputs/leafcutter_ds_cluster_significance.txt
+      md5sum: 508c79c195aa8dcf61b8b1f05dc255ff
+    - path: test-outputs/groups_file.txt
+      md5sum: 886479a52b4e007abf10f21977bca864
