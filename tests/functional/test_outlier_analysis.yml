@@ -1,6 +1,6 @@
 - name: Test outlier analysis
   tags:
-    - functional1
+    - functional
   command: nextflow run functional/workflows/test_outlier_analysis.nf
   files:
     - path: test-outputs/leafcutter_outlier_clusterPvals.txt.sorted
