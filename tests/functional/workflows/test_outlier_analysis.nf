@@ -2,11 +2,6 @@ params.perind_file = 'gs://leafcutter-inputs/cached-intermediary-outputs/leafcut
 
 process outlierAnalysis {
 
-  publishDir 'test-outputs'
-  cpus 1
-  container 'oceansource/leafcutter:workflows'
-  containerOptions = '--user root'
-
   input:
     path numers_counts
 
@@ -22,11 +17,6 @@ process outlierAnalysis {
 }
 
 process sortOutlierFiles {
-
-    publishDir 'test-outputs'
-    cpus 2
-    container 'oceansource/leafcutter:workflows'
-    containerOptions = '--user root'
     
     input:
         path outlier_file
