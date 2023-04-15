@@ -85,5 +85,4 @@ jobs:
       - name: run test
         working-directory: tests
         run: |
-          cp functional/workflows/nextflow.config .
           pytest --tag functional
