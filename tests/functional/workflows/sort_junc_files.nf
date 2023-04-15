@@ -2,10 +2,6 @@ params.juncsDir = "test-outputs"
 
 process sortJuncFiles {
   
-  publishDir 'test-outputs'
-  cpus 2
-  container 'oceansource/leafcutter:workflows'
-  containerOptions = "--user root"
   input:
     path juncFile
 

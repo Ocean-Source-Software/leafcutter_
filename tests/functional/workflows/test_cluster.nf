@@ -2,10 +2,6 @@ params.juncsDir = "gs://leafcutter-inputs/cached-intermediary-outputs"
 
 process cluster {
 
-  publishDir 'test-outputs'
-  cpus 2
-  container 'oceansource/leafcutter:workflows'
-  containerOptions = "--user root"
   input:
     path juncFiles
 
@@ -20,10 +16,6 @@ process cluster {
 
 process sortPerindFile {
   
-  publishDir 'test-outputs'
-  cpus 2
-  container 'oceansource/leafcutter:workflows'
-  containerOptions = "--user root"
   input:
     path perind_file
 

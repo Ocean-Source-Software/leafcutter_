@@ -4,12 +4,7 @@ params.bamsDir = "gs://leafcutter-inputs/bams"
 params.perindFile = "gs://leafcutter-inputs/cached-intermediary-outputs/leafcutter_perind_numers.counts.gz"
 
 process differential_splicing {
-  
-  publishDir 'test-outputs'
-  cpus 2
-  container 'oceansource/leafcutter:workflows'
-  containerOptions = "--user root"
-  
+    
   input:
     path groupABams
     path groupBBams

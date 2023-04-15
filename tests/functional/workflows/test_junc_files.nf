@@ -4,10 +4,6 @@ params.bamsDir = "gs://leafcutter-inputs/bams"
 
 process makeJuncFiles {
   
-  publishDir 'test-outputs'
-  cpus 2
-  container 'oceansource/leafcutter:workflows'
-  containerOptions = "--user root"
   input:
     path bamFile
 
@@ -24,10 +20,6 @@ process makeJuncFiles {
 
 process sortJuncFiles {
   
-  publishDir 'test-outputs'
-  cpus 2
-  container 'oceansource/leafcutter:workflows'
-  containerOptions = "--user root"
   input:
     path juncFile
 
