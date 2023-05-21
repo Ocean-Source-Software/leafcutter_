@@ -30,7 +30,7 @@ build:
 # Suggests: knitr, rmarkdown
 requirements:
   build:
-    - r-base >=4.2.2
+    - r-base 4.2.2
     - r-bh >=1.58.0
     - r-dt
     - r-hmisc
@@ -57,7 +57,7 @@ requirements:
     - python >=2.7,<3
 
   run:
-    - r-base >=4.2.2
+    - r-base 4.2.2
     - r-bh >=1.58.0
     - r-dt
     - r-hmisc
