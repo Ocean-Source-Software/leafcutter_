@@ -37,7 +37,7 @@ requirements:
     - r-r.utils
     - r-rcpp >=0.11.0
     - r-rcppeigen
-    - r-stanheaders >=2.8.0
+    - r-stanheaders 2.21.0
     - r-domc
     - r-dplyr
     - r-foreach
@@ -46,8 +46,8 @@ requirements:
     - r-intervals
     - r-optparse
     - r-reshape2
-    - r-rstan >=2.8.1
-    - r-rstantools
+    - r-rstan 2.21.8
+    - r-rstantools 2.2.0
     - r-shiny
     - r-shinyjs
     - r-shinycssloaders
@@ -64,7 +64,7 @@ requirements:
     - r-r.utils
     - r-rcpp >=0.11.0
     - r-rcppeigen
-    - r-stanheaders >=2.8.0
+    - r-stanheaders 2.21.0
     - r-domc
     - r-dplyr
     - r-foreach
@@ -73,8 +73,8 @@ requirements:
     - r-intervals
     - r-optparse
     - r-reshape2
-    - r-rstan >=2.8.1
-    - r-rstantools
+    - r-rstan 2.21.8
+    - r-rstantools 2.2.0
     - r-shiny
     - r-shinyjs
     - r-shinycssloaders
