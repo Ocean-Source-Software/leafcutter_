@@ -78,7 +78,7 @@ jobs:
         run: |
           mamba install pytest-workflow
 
-      - name: run functional tests
+      - name: run functional tests 
         working-directory: tests
         run: |
           pytest --tag functional
