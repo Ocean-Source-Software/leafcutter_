@@ -36,13 +36,12 @@ jobs:
       - name: build r-leafcutter conda package
         shell: bash -el {0}
         run: |
-          mamba install -y boa
+          mamba install -y boa urllib3==1.26.15
           conda mambabuild conda_recipe
 
       - name: push buid to anaconda
         shell: bash -el {0}
         run: |
-          mamba create -n anaconda_upload && mamba activate anaconda_upload
           mamba install -y anaconda-client -c anaconda
           export ANACONDA_API_TOKEN=${{ secrets.ANACONDA_TOKEN }}
           anaconda upload --force --label ${{ github.ref_name }} /usr/share/miniconda/envs/boabuild/conda-bld/linux-64/*.tar.bz2
