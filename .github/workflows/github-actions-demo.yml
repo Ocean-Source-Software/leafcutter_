@@ -40,11 +40,12 @@ jobs:
           mamba install -y boa urllib3==1.26.15
           conda mambabuild conda_recipe
 
-      - name: push buid to anaconda
+      - name: push build to anaconda
         shell: bash -el {0}
         run: |
           mamba install -y anaconda-client -c anaconda
           export ANACONDA_API_TOKEN=${{ secrets.ANACONDA_TOKEN }}
+          anaconda login --token $ANACONDA_API_TOKEN
           anaconda upload --force --label ${{ github.ref_name }} /usr/share/miniconda/envs/boabuild/conda-bld/linux-64/*.tar.bz2
 
       - name: set r-leafcutter label in env.yaml
