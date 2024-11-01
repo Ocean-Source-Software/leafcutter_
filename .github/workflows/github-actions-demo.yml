@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - workflows
+  workflow_dispatch: 
 
 jobs:
   bouild-upload-leafcutter:
